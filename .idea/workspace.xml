@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Update UI layout and reorganize resources&#10;&#10;- Reworked `view.fxml` to improve structure and layout&#10;- Moved `Gallery_Floor_Plan.png` to `images/gallery_floor_plan.png`">
+    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Update `Application.java` to adjust window properties&#10;&#10;- Enabled `sizeToScene()` for dynamic sizing&#10;- Disabled window resizing">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/rooms.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/main/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/controller/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +54,9 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3CgAxUnSDwlcFx1sVZTqqMe7H4Y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -69,6 +73,7 @@
     &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\johan\\AppData\\Roaming\\JetBrains\\IntelliJIdea2026.1\\plugins\\Shell Script\\shellcheck.exe&quot;,
@@ -85,8 +90,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\images" />
       <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources" />
+      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\images" />
       <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\ie\setu\nationalgalleryroutefinder\main\java" />
       <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\ie\setu\nationalgalleryroutefinder" />
     </key>
@@ -164,7 +169,11 @@
       <workItem from="1777135242692" duration="3000" />
       <workItem from="1777144827733" duration="4000" />
       <workItem from="1777554292990" duration="1238000" />
-      <workItem from="1777558268927" duration="35000" />
+      <workItem from="1777558268927" duration="106000" />
+      <workItem from="1777917252676" duration="140000" />
+      <workItem from="1777917409907" duration="979000" />
+      <workItem from="1777967157836" duration="10000" />
+      <workItem from="1777989230509" duration="171000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -206,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777555555474</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update `Application.java` to adjust window properties&#10;&#10;- Enabled `sizeToScene()` for dynamic sizing&#10;- Disabled window resizing">
+      <option name="closed" value="true" />
+      <created>1777558324406</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777558324407</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,7 +255,8 @@
     <MESSAGE value="Sets up the main application window with image display features." />
     <MESSAGE value="Update dependencies and compiler settings  &#10;&#10;- Bump JavaFX version to 26.0.1  &#10;- Consolidate JUnit dependencies into a single artifact  &#10;- Adjust Maven compiler plugin to use `release` configuration with Java 26" />
     <MESSAGE value="Update UI layout and reorganize resources&#10;&#10;- Reworked `view.fxml` to improve structure and layout&#10;- Moved `Gallery_Floor_Plan.png` to `images/gallery_floor_plan.png`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update UI layout and reorganize resources&#10;&#10;- Reworked `view.fxml` to improve structure and layout&#10;- Moved `Gallery_Floor_Plan.png` to `images/gallery_floor_plan.png`" />
+    <MESSAGE value="Update `Application.java` to adjust window properties&#10;&#10;- Enabled `sizeToScene()` for dynamic sizing&#10;- Disabled window resizing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update `Application.java` to adjust window properties&#10;&#10;- Enabled `sizeToScene()` for dynamic sizing&#10;- Disabled window resizing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/National_Gallery_Route_Finder$All_in_National_Gallery_Route_Finder.ic" NAME="All in National-Gallery-Route-Finder Coverage Results" MODIFIED="1776799616683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

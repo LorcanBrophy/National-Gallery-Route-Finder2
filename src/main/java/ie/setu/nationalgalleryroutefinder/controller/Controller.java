@@ -118,7 +118,7 @@ public class Controller implements Initializable {
         return imageView.getImage() != null || imageFile != null;
     }
 
-    // All FXML fields must be initialized in the initialize() method. Not the constructor.
+    // FXML fields must be initialized here, not the constructor, otherwise they will load too early.
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         imageView.imageProperty().addListener(this::onImageChanged);
