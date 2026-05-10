@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Update UI layout and reorganize resources&#10;&#10;- Reworked `view.fxml` to improve structure and layout&#10;- Moved `Gallery_Floor_Plan.png` to `images/gallery_floor_plan.png`">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/main/Application.java" afterDir="false" />
+    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,9 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3CgAxUnSDwlcFx1sVZTqqMe7H4Y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
