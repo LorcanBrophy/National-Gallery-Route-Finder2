@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Updated rooms.csv&#10;&#10;- edges.csv has been added&#10;- exhibits.csv has been added">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/edges.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/exhibits.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rooms.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rooms.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +188,7 @@
       <workItem from="1777917409907" duration="979000" />
       <workItem from="1777967157836" duration="10000" />
       <workItem from="1777989230509" duration="171000" />
-      <workItem from="1778381281343" duration="324000" />
+      <workItem from="1778381281343" duration="999000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -240,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777558324407</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated rooms.csv&#10;&#10;- edges.csv has been added&#10;- exhibits.csv has been added">
+      <option name="closed" value="true" />
+      <created>1778381973217</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778381973217</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
