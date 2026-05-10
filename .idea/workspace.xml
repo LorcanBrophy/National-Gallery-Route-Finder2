@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777555555474</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments">
+      <option name="closed" value="true" />
+      <created>1778439897923</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778439897923</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,7 +246,10 @@
     <MESSAGE value="Sets up the main application window with image display features." />
     <MESSAGE value="Update dependencies and compiler settings  &#10;&#10;- Bump JavaFX version to 26.0.1  &#10;- Consolidate JUnit dependencies into a single artifact  &#10;- Adjust Maven compiler plugin to use `release` configuration with Java 26" />
     <MESSAGE value="Update UI layout and reorganize resources&#10;&#10;- Reworked `view.fxml` to improve structure and layout&#10;- Moved `Gallery_Floor_Plan.png` to `images/gallery_floor_plan.png`" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update UI layout and reorganize resources&#10;&#10;- Reworked `view.fxml` to improve structure and layout&#10;- Moved `Gallery_Floor_Plan.png` to `images/gallery_floor_plan.png`" />
+    <MESSAGE value="Update `.idea/workspace.xml` to modify VCS settings and clean up change list comments" />
+    <MESSAGE value="Update `.idea/workspace.xml` to adjust VCS settings and clean up change list comments" />
+    <MESSAGE value="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/National_Gallery_Route_Finder$All_in_National_Gallery_Route_Finder.ic" NAME="All in National-Gallery-Route-Finder Coverage Results" MODIFIED="1776799616683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
