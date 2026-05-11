@@ -6,7 +6,7 @@ import ie.setu.nationalgalleryroutefinder.model.MyHashtable;
 public class Graph<T> {
 
     private final MyHashtable<Integer, Vertices<T>> vertex;
-
+    //a
     public Graph() {
         this.vertex = new MyHashtable<>();
     }
