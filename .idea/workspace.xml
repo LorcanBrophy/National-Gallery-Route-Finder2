@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Updated models&#10;&#10;- added Exhibit.java&#10;- added Room.java">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +31,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/johannes-grcevic/National-Gallery-Route-Finder.git&quot;,
-    &quot;accountId&quot;: &quot;0be7aa1a-1328-492f-9145-29b84bd480a5&quot;
+    &quot;accountId&quot;: &quot;1bcf9391-3f60-44f7-ac18-839bc4862bf2&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -71,32 +69,24 @@
     &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\johan\\AppData\\Roaming\\JetBrains\\IntelliJIdea2026.1\\plugins\\Shell Script\\shellcheck.exe&quot;,
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/johan/OneDrive - South East Technological University/Computer Science SETU/Semester 4/Data Structures and Algorithms 2/CA2/National-Gallery-Route-Finder&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.40114942&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources" />
       <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\images" />
+      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources" />
       <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\ie\setu\nationalgalleryroutefinder\main\java" />
       <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\ie\setu\nationalgalleryroutefinder" />
     </key>
@@ -122,15 +112,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="" />
@@ -183,13 +164,7 @@
       <workItem from="1777135242692" duration="3000" />
       <workItem from="1777144827733" duration="4000" />
       <workItem from="1777554292990" duration="1238000" />
-      <workItem from="1777558268927" duration="106000" />
-      <workItem from="1777917252676" duration="140000" />
-      <workItem from="1777917409907" duration="979000" />
-      <workItem from="1777967157836" duration="10000" />
-      <workItem from="1777989230509" duration="171000" />
-      <workItem from="1778381281343" duration="1333000" />
-      <workItem from="1778509561172" duration="684000" />
+      <workItem from="1777558268927" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -231,35 +206,16 @@
       <option name="project" value="LOCAL" />
       <updated>1777555555474</updated>
     </task>
-    <task id="LOCAL-00006" summary="Update `Application.java` to adjust window properties&#10;&#10;- Enabled `sizeToScene()` for dynamic sizing&#10;- Disabled window resizing">
+    <task id="LOCAL-00006" summary="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments">
       <option name="closed" value="true" />
-      <created>1777558324406</created>
+      <created>1778439897923</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1777558324407</updated>
+      <updated>1778439897923</updated>
     </task>
-    <task id="LOCAL-00007" summary="Updated rooms.csv&#10;&#10;- edges.csv has been added&#10;- exhibits.csv has been added">
-      <option name="closed" value="true" />
-      <created>1778381973217</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1778381973217</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Updated models&#10;&#10;- added Exhibit.java&#10;- added Room.java">
-      <option name="closed" value="true" />
-      <created>1778382612733</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1778382612733</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -290,10 +246,10 @@
     <MESSAGE value="Sets up the main application window with image display features." />
     <MESSAGE value="Update dependencies and compiler settings  &#10;&#10;- Bump JavaFX version to 26.0.1  &#10;- Consolidate JUnit dependencies into a single artifact  &#10;- Adjust Maven compiler plugin to use `release` configuration with Java 26" />
     <MESSAGE value="Update UI layout and reorganize resources&#10;&#10;- Reworked `view.fxml` to improve structure and layout&#10;- Moved `Gallery_Floor_Plan.png` to `images/gallery_floor_plan.png`" />
-    <MESSAGE value="Update `Application.java` to adjust window properties&#10;&#10;- Enabled `sizeToScene()` for dynamic sizing&#10;- Disabled window resizing" />
-    <MESSAGE value="Updated rooms.csv&#10;&#10;- edges.csv has been added&#10;- exhibits.csv has been added" />
-    <MESSAGE value="Updated models&#10;&#10;- added Exhibit.java&#10;- added Room.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated models&#10;&#10;- added Exhibit.java&#10;- added Room.java" />
+    <MESSAGE value="Update `.idea/workspace.xml` to modify VCS settings and clean up change list comments" />
+    <MESSAGE value="Update `.idea/workspace.xml` to adjust VCS settings and clean up change list comments" />
+    <MESSAGE value="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/National_Gallery_Route_Finder$All_in_National_Gallery_Route_Finder.ic" NAME="All in National-Gallery-Route-Finder Coverage Results" MODIFIED="1776799616683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
