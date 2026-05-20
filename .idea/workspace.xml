@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/Graphs/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/Graphs/Vertices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Added Graph class&#10;&#10;Includes &#10;- Graph.java&#10;- Vertices.java&#10;- Edge.java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,7 +222,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778439897923</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated models&#10;&#10;- added Exhibit.java&#10;- added Room.java">
+      <option name="closed" value="true" />
+      <created>1778528458842</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778528458842</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added Graph class&#10;&#10;Includes &#10;- Graph.java&#10;- Vertices.java&#10;- Edge.java">
+      <option name="closed" value="true" />
+      <created>1778528553557</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1778528553557</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +273,9 @@
     <MESSAGE value="Update `.idea/workspace.xml` to modify VCS settings and clean up change list comments" />
     <MESSAGE value="Update `.idea/workspace.xml` to adjust VCS settings and clean up change list comments" />
     <MESSAGE value="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments" />
+    <MESSAGE value="Updated models&#10;&#10;- added Exhibit.java&#10;- added Room.java" />
+    <MESSAGE value="Added Graph class&#10;&#10;Includes &#10;- Graph.java&#10;- Vertices.java&#10;- Edge.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Graph class&#10;&#10;Includes &#10;- Graph.java&#10;- Vertices.java&#10;- Edge.java" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/National_Gallery_Route_Finder$All_in_National_Gallery_Route_Finder.ic" NAME="All in National-Gallery-Route-Finder Coverage Results" MODIFIED="1776799616683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
