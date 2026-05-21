@@ -1,4 +1,4 @@
-package ie.setu.nationalgalleryroutefinder.util;
+package com.nationalgalleryroutefinder.util;
 
 import javafx.animation.ScaleTransition;
 import javafx.scene.Node;
@@ -10,10 +10,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public final class FXUtils {
-    private FXUtils() {
-        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
-    }
-
     /**
      * @param message The message to display in the alert.
      * @param alertType The type of alert to display.

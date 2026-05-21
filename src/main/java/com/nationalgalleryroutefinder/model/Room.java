@@ -1,4 +1,4 @@
-package ie.setu.nationalgalleryroutefinder.model;
+package com.nationalgalleryroutefinder.model;
 
 public class Room {
     private final int id;

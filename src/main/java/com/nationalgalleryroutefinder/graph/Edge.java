@@ -1,4 +1,4 @@
-package ie.setu.nationalgalleryroutefinder.Graphs;
+package com.nationalgalleryroutefinder.graph;
 
 public class Edge<T> {
 

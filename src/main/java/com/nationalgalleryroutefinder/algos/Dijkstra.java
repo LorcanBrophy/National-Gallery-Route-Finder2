@@ -1,10 +1,10 @@
-package ie.setu.nationalgalleryroutefinder.algos;
+package com.nationalgalleryroutefinder.algos;
 
-import ie.setu.nationalgalleryroutefinder.Graphs.Edge;
-import ie.setu.nationalgalleryroutefinder.Graphs.Graph;
-import ie.setu.nationalgalleryroutefinder.Graphs.Vertices;
-import ie.setu.nationalgalleryroutefinder.model.MyArrayList;
-import ie.setu.nationalgalleryroutefinder.model.MyHashtable;
+import com.nationalgalleryroutefinder.graph.Edge;
+import com.nationalgalleryroutefinder.graph.Graph;
+import com.nationalgalleryroutefinder.graph.Vertices;
+import com.nationalgalleryroutefinder.model.MyArrayList;
+import com.nationalgalleryroutefinder.model.MyHashtable;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Comparator;

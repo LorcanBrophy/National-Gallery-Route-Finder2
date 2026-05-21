@@ -1,12 +1,8 @@
-package ie.setu.nationalgalleryroutefinder.util;
+package com.nationalgalleryroutefinder.util;
 
 import javafx.geometry.Point2D;
 
 public final class PointUtils {
-    private PointUtils() {
-        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
-    }
-
     /**
      * @param a The first point.
      * @param b The second point.

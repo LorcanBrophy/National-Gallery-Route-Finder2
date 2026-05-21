@@ -1,4 +1,4 @@
-package ie.setu.nationalgalleryroutefinder.model;
+package com.nationalgalleryroutefinder.model;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
-package ie.setu.nationalgalleryroutefinder.Graphs;
+package com.nationalgalleryroutefinder.graph;
 
-import ie.setu.nationalgalleryroutefinder.model.MyArrayList;
+import com.nationalgalleryroutefinder.model.MyArrayList;
 
 public class Vertices<T> {
 

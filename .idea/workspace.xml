@@ -4,13 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="">
+    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Update `.idea` configuration files and resource paths&#10;&#10;- Adjusted JDK language level to 26 in `misc.xml`&#10;- Cleaned up `.idea/workspace.xml` to modify VCS settings and changelist comments&#10;- Updated resource file paths (e.g., moved `csv` files to dedicated folder)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/gallery_floor_plan_bw.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/edges.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csv/edges.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/exhibits.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csv/exhibits.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/gallery_floor_plan.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/gallery_floor_plan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rooms.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csv/rooms.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/Graphs/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/graph/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/Graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/Graphs/Vertices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/graph/Vertices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/algos/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/algos/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/algos/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/algos/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/main/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/main/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/main/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/model/Exhibit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/model/Exhibit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/model/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/model/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/model/MyHashtable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/model/MyHashtable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/ArrayUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/ArrayUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/BenchmarkUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/CSVLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/CSVLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/ColorUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/FXUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/FXUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/PointUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/PointUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +38,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="45" />
+    <option name="cachedIndexableFilesCount" value="47" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -59,6 +79,65 @@
     <commands />
     <urls />
   </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000009085063917" />
+      <entry key="MS500" value="1.061896429495814" />
+      <entry key="S2" value="1.4987884626322274" />
+      <entry key="S5" value="1.757123672577837" />
+      <entry key="S10" value="1.8710338171164747" />
+      <entry key="S30" value="2.1060207501148573" />
+      <entry key="S60" value="2.534588231806696" />
+      <entry key="M2" value="3.1621968081309264" />
+      <entry key="M5" value="5.822211871429143" />
+      <entry key="M10" value="12.758462243175975" />
+      <entry key="M15" value="18.844315600142213" />
+      <entry key="M30" value="32.21896832836691" />
+      <entry key="H1" value="50.32925572750868" />
+      <entry key="H2" value="69.47866887540825" />
+      <entry key="H4" value="84.38984625813501" />
+      <entry key="D1" value="101.07293989690102" />
+      <entry key="W1" value="104.42543270262527" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="2.944374974618675E-121" />
+      <entry key="S5" value="6.292963142994843E-49" />
+      <entry key="S10" value="9.103887105723382E-25" />
+      <entry key="S30" value="1.519716176636803E-8" />
+      <entry key="S60" value="2.3191686619121346E-4" />
+      <entry key="M2" value="0.04397475162709925" />
+      <entry key="M5" value="1.6590232705335295" />
+      <entry key="M10" value="6.5117251822245255" />
+      <entry key="M15" value="10.716476709693007" />
+      <entry key="M30" value="20.228507784542103" />
+      <entry key="H1" value="34.04067395675888" />
+      <entry key="H2" value="49.232906959690794" />
+      <entry key="H4" value="61.24991822054354" />
+      <entry key="D1" value="74.79947870432515" />
+      <entry key="W1" value="77.53151538516668" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9726558310755221" />
+      <entry key="MS500" value="1.0560243213541862" />
+      <entry key="S2" value="1.4967121401675563" />
+      <entry key="S5" value="1.7561495861414165" />
+      <entry key="S10" value="1.8705148371290874" />
+      <entry key="S30" value="2.105809061244687" />
+      <entry key="S60" value="2.5346592785904805" />
+      <entry key="M2" value="3.205174901532222" />
+      <entry key="M5" value="7.469187772131339" />
+      <entry key="M10" value="19.24749901239029" />
+      <entry key="M15" value="29.536305712307882" />
+      <entry key="M30" value="52.424777617405674" />
+      <entry key="H1" value="84.35087125587617" />
+      <entry key="H2" value="118.69775757117357" />
+      <entry key="H4" value="145.63115235102572" />
+      <entry key="D1" value="175.8706627540568" />
+      <entry key="W1" value="181.95668801659363" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7,
   &quot;fromUser&quot;: false
@@ -71,56 +150,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.nationalgalleryroutefinder.Launcher.executor&quot;: &quot;Run&quot;,
-    &quot;Git.Working.Tree.Tab.closed.by.user&quot;: &quot;closed&quot;,
-    &quot;JUnit.All in National-Gallery-Route-Finder.executor&quot;: &quot;Coverage&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-vcs.commit.finished&quot;: &quot;3 files committed&quot;,
-    &quot;Notification.DoNotAsk-vcs.commit.finished&quot;: &quot;true&quot;,
-    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;C:\\Users\\johan\\AppData\\Roaming\\JetBrains\\IntelliJIdea2026.1\\plugins\\Shell Script\\shellcheck.exe&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/johan/OneDrive - South East Technological University/Computer Science SETU/Semester 4/Data Structures and Algorithms 2/CA2/National-Gallery-Route-Finder&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.40114942&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "Application.Launcher.executor": "Run",
+    "Application.nationalgalleryroutefinder.Launcher.executor": "Run",
+    "Git.Working.Tree.Tab.closed.by.user": "closed",
+    "JUnit.All in National-Gallery-Route-Finder.executor": "Coverage",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-vcs.commit.finished": "3 files committed",
+    "Notification.DoNotAsk-vcs.commit.finished": "true",
+    "OverrideImplement.generate.javadoc": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "C:\\Users\\johan\\AppData\\Roaming\\JetBrains\\IntelliJIdea2026.1\\plugins\\Shell Script\\shellcheck.exe",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/johan/OneDrive - South East Technological University/Computer Science SETU/Semester 4/Data Structures and Algorithms 2/CA2/National-Gallery-Route-Finder",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.40114942",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\images" />
-      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\csv" />
+      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\fxml" />
+      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\css" />
       <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources" />
-      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\ie\setu\nationalgalleryroutefinder\main\java" />
-      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\ie\setu\nationalgalleryroutefinder" />
+      <recent name="C:\Users\johan\OneDrive - South East Technological University\Computer Science SETU\Semester 4\Data Structures and Algorithms 2\CA2\National-Gallery-Route-Finder\src\main\resources\csv" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ie.setu.nationalgalleryroutefinder.main.Launcher" />
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.nationalgalleryroutefinder.main.Application" />
       <module name="National-Gallery-Route-Finder" />
       <option name="VM_PARAMETERS" value="--sun-misc-unsafe-memory-access=allow --enable-native-access=javafx.graphics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ie.setu.nationalgalleryroutefinder.main.*" />
+          <option name="PATTERN" value="com.nationalgalleryroutefinder.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,7 +210,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +277,8 @@
       <workItem from="1777558268927" duration="35000" />
       <workItem from="1778576253958" duration="125000" />
       <workItem from="1779353069071" duration="44000" />
-      <workItem from="1779378651295" duration="1960000" />
+      <workItem from="1779378651295" duration="7156000" />
+      <workItem from="1779387324742" duration="4071000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -247,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778439897923</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update `.idea` configuration files and resource paths&#10;&#10;- Adjusted JDK language level to 26 in `misc.xml`&#10;- Cleaned up `.idea/workspace.xml` to modify VCS settings and changelist comments&#10;- Updated resource file paths (e.g., moved `csv` files to dedicated folder)">
+      <option name="closed" value="true" />
+      <created>1779380891601</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779380891601</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +374,21 @@
     <MESSAGE value="Update `.idea/workspace.xml` to modify VCS settings and clean up change list comments" />
     <MESSAGE value="Update `.idea/workspace.xml` to adjust VCS settings and clean up change list comments" />
     <MESSAGE value="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update `.idea/workspace.xml` to modify VCS manager settings and clean up changelist comments" />
+    <MESSAGE value="Reorganize resource files and adjust UI layout&#10;&#10;- Moved CSV files to `resources/csv` directory&#10;- Updated `view.fxml` to modify `ImageView` dimensions and XML namespace&#10;- Adjusted `.idea/workspace.xml` to reflect updated paths and configuration changes" />
+    <MESSAGE value="Update `.idea` configuration files&#10;&#10;- Clean up redundant changelists in `workspace.xml`&#10;- Adjust file paths in project resources for better organization" />
+    <MESSAGE value="Update `.idea` configuration files&#10;&#10;- Add new shelved changes for VCS and settings updates&#10;- Adjust resource paths, including files in `csv` and `images` directories&#10;- Modify `workspace.xml` to include updated task and changelist details" />
+    <MESSAGE value="Update `.idea` shelf files and workspace configuration&#10;&#10;- Include new changelists in `.idea/shelf`&#10;- Adjusted VCS settings and JDK language level references in `workspace.xml`" />
+    <MESSAGE value="Update `.idea` configuration files&#10;&#10;- Relocate resource files for better organization  &#10;- Adjust JDK language level to 26 in `misc.xml`" />
+    <MESSAGE value="Reorganize resources folder and update `.idea/workspace.xml` &#10;&#10;- Moved CSV files to a dedicated `csv` folder  &#10;- Adjusted FXML for updated image dimensions  &#10;- Updated `.idea/workspace.xml` to reflect new paths and minor IDE settings changes  " />
+    <MESSAGE value="Update `.idea/shelf` changelists and workspace settings&#10;&#10;- Create changelists for `.idea/shelf/` &#10;- Adjust paths in workspace configuration" />
+    <MESSAGE value="Update `.idea` configuration files&#10;&#10;- Modify VCS changelists  &#10;- Relocate resource files to organized directories" />
+    <MESSAGE value="Update `.idea` configuration files&#10;&#10;- Adjusted JDK language level to 26 in `misc.xml`  &#10;- Organized `.idea` files and cleaned up workspace changelist comments" />
+    <MESSAGE value="Update `.idea` configuration files&#10;&#10;- Adjust JDK language level to 26 in `misc.xml`  &#10;- Modify VCS manager settings and clean up changelist structure" />
+    <MESSAGE value="Update `.idea` configuration&#10;&#10;- Add shelved changes for VCS management in `.idea/shelf`&#10;- Modify `.idea/workspace.xml` and update file paths in `resources`" />
+    <MESSAGE value="Restructure `.idea` configuration and resource files&#10;&#10;- Move CSV and image files to organized directories&#10;- Update `workspace.xml` to reflect changes" />
+    <MESSAGE value="Update `.idea` configuration files&#10;&#10;- Add shelved changelists and update workspace and VCS settings&#10;- Adjust resource file paths and JDK language level" />
+    <MESSAGE value="Update `.idea` configuration files and resource paths&#10;&#10;- Adjusted JDK language level to 26 in `misc.xml`&#10;- Cleaned up `.idea/workspace.xml` to modify VCS settings and changelist comments&#10;- Updated resource file paths (e.g., moved `csv` files to dedicated folder)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update `.idea` configuration files and resource paths&#10;&#10;- Adjusted JDK language level to 26 in `misc.xml`&#10;- Cleaned up `.idea/workspace.xml` to modify VCS settings and changelist comments&#10;- Updated resource file paths (e.g., moved `csv` files to dedicated folder)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/National_Gallery_Route_Finder$All_in_National_Gallery_Route_Finder.ic" NAME="All in National-Gallery-Route-Finder Coverage Results" MODIFIED="1776799616683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

@@ -1,8 +1,8 @@
-package ie.setu.nationalgalleryroutefinder.util;
+package com.nationalgalleryroutefinder.util;
 
-import ie.setu.nationalgalleryroutefinder.Graphs.Graph;
-import ie.setu.nationalgalleryroutefinder.model.Exhibit;
-import ie.setu.nationalgalleryroutefinder.model.Room;
+import com.nationalgalleryroutefinder.graph.Graph;
+import com.nationalgalleryroutefinder.model.Exhibit;
+import com.nationalgalleryroutefinder.model.Room;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -10,11 +10,13 @@ import java.io.IOException;
 public class CSVLoader {
 
     //loads all three CSVs and returns a fully built graph
-    public Graph<Room> loadGraph(String roomsFile, String exhibitsFile, String edgesFile) throws IOException {
+    public Graph<Room> loadGraph(String roomsFilePath, String exhibitsFilePath, String edgesFilePath) throws IOException {
         Graph<Room> graph = new Graph<>();
-        loadRooms(graph, roomsFile);
-        loadExhibits(graph, exhibitsFile);
-        loadEdges(graph, edgesFile);
+
+        loadRooms(graph, roomsFilePath);
+        loadExhibits(graph, exhibitsFilePath);
+        loadEdges(graph, edgesFilePath);
+
         return graph;
     }
 
@@ -49,6 +51,7 @@ public class CSVLoader {
             }
         }
     }
+
     private void loadExhibits(Graph<Room> graph, String filePath) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
 
