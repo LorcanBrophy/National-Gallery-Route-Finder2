@@ -4,33 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Update `.idea` configuration files and resource paths&#10;&#10;- Adjusted JDK language level to 26 in `misc.xml`&#10;- Cleaned up `.idea/workspace.xml` to modify VCS settings and changelist comments&#10;- Updated resource file paths (e.g., moved `csv` files to dedicated folder)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/gallery_floor_plan_bw.png" afterDir="false" />
+    <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Add new `view.fxml` file with defined UI structure and controls&#10;&#10;- Introduces `BorderPane` layout with `MenuBar`, `ImageView`, and `Label`. &#10;- Updates resource paths for stylesheets and images.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/Graphs/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/graph/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/Graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/graph/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/Graphs/Vertices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/graph/Vertices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/algos/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/algos/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/algos/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/algos/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/controller/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/main/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/main/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/main/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/model/Exhibit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/model/Exhibit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/model/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/model/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/model/MyHashtable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/model/MyHashtable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/ArrayUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/ArrayUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/BenchmarkUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/CSVLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/CSVLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/ColorUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/FXUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/FXUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/PointUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/PointUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ie/setu/nationalgalleryroutefinder/util/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/util/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/algos/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/algos/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/algos/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/algos/Dijkstra.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,61 +58,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000009085063917" />
-      <entry key="MS500" value="1.061896429495814" />
-      <entry key="S2" value="1.4987884626322274" />
-      <entry key="S5" value="1.757123672577837" />
-      <entry key="S10" value="1.8710338171164747" />
-      <entry key="S30" value="2.1060207501148573" />
-      <entry key="S60" value="2.534588231806696" />
-      <entry key="M2" value="3.1621968081309264" />
-      <entry key="M5" value="5.822211871429143" />
-      <entry key="M10" value="12.758462243175975" />
-      <entry key="M15" value="18.844315600142213" />
-      <entry key="M30" value="32.21896832836691" />
-      <entry key="H1" value="50.32925572750868" />
-      <entry key="H2" value="69.47866887540825" />
-      <entry key="H4" value="84.38984625813501" />
-      <entry key="D1" value="101.07293989690102" />
-      <entry key="W1" value="104.42543270262527" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000000000282068" />
+      <entry key="S5" value="1.0000896006835571" />
+      <entry key="S10" value="1.0140848431531224" />
+      <entry key="S30" value="1.4687552538474435" />
+      <entry key="S60" value="2.1873397108423616" />
+      <entry key="M2" value="3.116900833079934" />
+      <entry key="M5" value="5.583813223639312" />
+      <entry key="M10" value="11.395821634191705" />
+      <entry key="M15" value="17.23623157829885" />
+      <entry key="M30" value="31.096286082659496" />
+      <entry key="H1" value="50.18761662685606" />
+      <entry key="H2" value="70.56889414086801" />
+      <entry key="H4" value="86.60665109006446" />
+      <entry key="D1" value="104.7142430417814" />
+      <entry key="W1" value="108.37242014914555" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.944374974618675E-121" />
-      <entry key="S5" value="6.292963142994843E-49" />
-      <entry key="S10" value="9.103887105723382E-25" />
-      <entry key="S30" value="1.519716176636803E-8" />
-      <entry key="S60" value="2.3191686619121346E-4" />
-      <entry key="M2" value="0.04397475162709925" />
-      <entry key="M5" value="1.6590232705335295" />
-      <entry key="M10" value="6.5117251822245255" />
-      <entry key="M15" value="10.716476709693007" />
-      <entry key="M30" value="20.228507784542103" />
-      <entry key="H1" value="34.04067395675888" />
-      <entry key="H2" value="49.232906959690794" />
-      <entry key="H4" value="61.24991822054354" />
-      <entry key="D1" value="74.79947870432515" />
-      <entry key="W1" value="77.53151538516668" />
+      <entry key="MS100" value="1.99936501583157E-62" />
+      <entry key="MS500" value="4.572911754296429E-13" />
+      <entry key="S2" value="8.847311882534532E-4" />
+      <entry key="S5" value="0.07914795501707933" />
+      <entry key="S10" value="0.38577672805782875" />
+      <entry key="S30" value="1.1472043242601428" />
+      <entry key="S60" value="1.5133368811288859" />
+      <entry key="M2" value="1.7427805524568531" />
+      <entry key="M5" value="2.4905413057036743" />
+      <entry key="M10" value="5.858583120193828" />
+      <entry key="M15" value="9.595246144856944" />
+      <entry key="M30" value="19.052577728713615" />
+      <entry key="H1" value="33.26210820933341" />
+      <entry key="H2" value="49.183187988722324" />
+      <entry key="H4" value="61.96198077570238" />
+      <entry key="D1" value="76.5351041825116" />
+      <entry key="W1" value="79.492310903412" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9726558310755221" />
-      <entry key="MS500" value="1.0560243213541862" />
-      <entry key="S2" value="1.4967121401675563" />
-      <entry key="S5" value="1.7561495861414165" />
-      <entry key="S10" value="1.8705148371290874" />
-      <entry key="S30" value="2.105809061244687" />
-      <entry key="S60" value="2.5346592785904805" />
-      <entry key="M2" value="3.205174901532222" />
-      <entry key="M5" value="7.469187772131339" />
-      <entry key="M10" value="19.24749901239029" />
-      <entry key="M15" value="29.536305712307882" />
-      <entry key="M30" value="52.424777617405674" />
-      <entry key="H1" value="84.35087125587617" />
-      <entry key="H2" value="118.69775757117357" />
-      <entry key="H4" value="145.63115235102572" />
-      <entry key="D1" value="175.8706627540568" />
-      <entry key="W1" value="181.95668801659363" />
+      <entry key="MS100" value="7.158416438182858E-5" />
+      <entry key="MS500" value="0.1482393124266587" />
+      <entry key="S2" value="0.6212826503228548" />
+      <entry key="S5" value="0.9010872387898836" />
+      <entry key="S10" value="1.2957307651701016" />
+      <entry key="S30" value="2.5557599408388105" />
+      <entry key="S60" value="3.655743177944597" />
+      <entry key="M2" value="4.830159311342851" />
+      <entry key="M5" value="8.055824215655356" />
+      <entry key="M10" value="17.233198373488523" />
+      <entry key="M15" value="26.808878186502778" />
+      <entry key="M30" value="50.12706934894061" />
+      <entry key="H1" value="83.43088238895014" />
+      <entry key="H2" value="119.73816682996672" />
+      <entry key="H4" value="148.55986403417165" />
+      <entry key="D1" value="181.24754136265605" />
+      <entry key="W1" value="187.86446307922765" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -278,7 +255,7 @@
       <workItem from="1778576253958" duration="125000" />
       <workItem from="1779353069071" duration="44000" />
       <workItem from="1779378651295" duration="7156000" />
-      <workItem from="1779387324742" duration="4071000" />
+      <workItem from="1779387324742" duration="4458000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -336,7 +313,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779380891601</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Remove unused utility classes, reorganize packages, and update resources&#10;&#10;- Deleted `BenchmarkUtils`, `ColorUtils`, and `Controller` classes along with `view.fxml` due to redundancy.&#10;- Restructured package names from `ie.setu` to `com.nationalgalleryroutefinder`.&#10;- Updated `Application.java` to reference new resource paths and included a stylesheets loader.&#10;- Cleaned up `.idea/workspace.xml` to reflect updated VCS settings and file paths.">
+      <option name="closed" value="true" />
+      <created>1779393494390</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1779393494390</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add new `view.fxml` file with defined UI structure and controls&#10;&#10;- Introduces `BorderPane` layout with `MenuBar`, `ImageView`, and `Label`. &#10;- Updates resource paths for stylesheets and images.">
+      <option name="closed" value="true" />
+      <created>1779393505152</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1779393505152</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +381,10 @@
     <MESSAGE value="Restructure `.idea` configuration and resource files&#10;&#10;- Move CSV and image files to organized directories&#10;- Update `workspace.xml` to reflect changes" />
     <MESSAGE value="Update `.idea` configuration files&#10;&#10;- Add shelved changelists and update workspace and VCS settings&#10;- Adjust resource file paths and JDK language level" />
     <MESSAGE value="Update `.idea` configuration files and resource paths&#10;&#10;- Adjusted JDK language level to 26 in `misc.xml`&#10;- Cleaned up `.idea/workspace.xml` to modify VCS settings and changelist comments&#10;- Updated resource file paths (e.g., moved `csv` files to dedicated folder)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update `.idea` configuration files and resource paths&#10;&#10;- Adjusted JDK language level to 26 in `misc.xml`&#10;- Cleaned up `.idea/workspace.xml` to modify VCS settings and changelist comments&#10;- Updated resource file paths (e.g., moved `csv` files to dedicated folder)" />
+    <MESSAGE value="Remove deprecated utility classes and unused FXML resources&#10;&#10;- Deleted `BenchmarkUtils`, `ColorUtils`, and `Controller.java` as they are no longer in use.&#10;- Removed redundant `view.fxml` file and associated UI components." />
+    <MESSAGE value="Remove unused utility classes, reorganize packages, and update resources&#10;&#10;- Deleted `BenchmarkUtils`, `ColorUtils`, and `Controller` classes along with `view.fxml` due to redundancy.&#10;- Restructured package names from `ie.setu` to `com.nationalgalleryroutefinder`.&#10;- Updated `Application.java` to reference new resource paths and included a stylesheets loader.&#10;- Cleaned up `.idea/workspace.xml` to reflect updated VCS settings and file paths." />
+    <MESSAGE value="Add new `view.fxml` file with defined UI structure and controls&#10;&#10;- Introduces `BorderPane` layout with `MenuBar`, `ImageView`, and `Label`. &#10;- Updates resource paths for stylesheets and images." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new `view.fxml` file with defined UI structure and controls&#10;&#10;- Introduces `BorderPane` layout with `MenuBar`, `ImageView`, and `Label`. &#10;- Updates resource paths for stylesheets and images." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/National_Gallery_Route_Finder$All_in_National_Gallery_Route_Finder.ic" NAME="All in National-Gallery-Route-Finder Coverage Results" MODIFIED="1776799616683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

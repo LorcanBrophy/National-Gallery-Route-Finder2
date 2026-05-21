@@ -1,12 +1,15 @@
 package com.nationalgalleryroutefinder.algos;
+
 import com.nationalgalleryroutefinder.graph.Edge;
 import com.nationalgalleryroutefinder.graph.Graph;
 import com.nationalgalleryroutefinder.graph.Vertices;
 import com.nationalgalleryroutefinder.model.MyArrayList;
 import com.nationalgalleryroutefinder.model.MyHashtable;
 
-public class BFS {
-    public static <T> MyArrayList<T> traverse(Graph<T> graph, int startID, int endID) {
+import java.util.List;
+
+public final class BFS {
+    public static <T> List<T> traverse(Graph<T> graph, int startID, int endID) {
         // final correct path to be returned
         MyArrayList<T> correctPath = new MyArrayList<>();
 
@@ -27,7 +30,7 @@ public class BFS {
         while (!queue.isEmpty()) {
 
             // remove from front to maintain FIFO order
-            Vertices<T> current = queue.remove(0);
+            Vertices<T> current = queue.removeFirst();
             if (current == end) {
                 found = true;
                 break;

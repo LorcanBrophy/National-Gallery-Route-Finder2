@@ -6,12 +6,13 @@ import com.nationalgalleryroutefinder.graph.Vertices;
 import com.nationalgalleryroutefinder.model.MyArrayList;
 import com.nationalgalleryroutefinder.model.MyHashtable;
 import java.util.Arrays;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Comparator;
 
-public class Dijkstra {
+public final class Dijkstra {
 
-    public static <T> MyArrayList<T> traverse(Graph<T> graph, int startID, int endID, MyArrayList<T> avoidedRooms) {
+    public static <T> MyArrayList<T> traverse(Graph<T> graph, int startID, int endID, List<T> avoidedRooms) {
         MyArrayList<T> result = new MyArrayList<>();
         Vertices<T> start = graph.getVertex(startID);
         Vertices<T> end = graph.getVertex(endID);
