@@ -33,7 +33,18 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+    <dependency>
+        <groupId>org.openjdk.jmh</groupId>
+        <artifactId>jmh-core</artifactId>
+        <version>1.37</version>
+    </dependency>
+    <dependency>
+        <groupId>org.openjdk.jmh</groupId>
+        <artifactId>jmh-generator-annprocess</artifactId>
+        <version>1.37</version>
+    </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
@@ -43,6 +54,13 @@
                 <version>3.13.0</version>
                 <configuration>
                     <release>26</release>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.openjdk.jmh</groupId>
+                            <artifactId>jmh-generator-annprocess</artifactId>
+                            <version>1.37</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>
