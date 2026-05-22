@@ -4,17 +4,24 @@ import com.nationalgalleryroutefinder.model.MyArrayList;
 
 public class Vertices<T> {
 
+    private final int id;
     private final T data;
     private final MyArrayList<Edge<T>> edges;
 
-    public Vertices(T data) {
+    public Vertices(int id, T data) {
+        this.id = id;
         this.data = data;
         this.edges = new MyArrayList<>();
+    }
+
+    public int getId() {
+        return id;
     }
 
     public T getData() {
         return data;
     }
+
     public MyArrayList<Edge<T>> getEdges() {
         return edges;
     }

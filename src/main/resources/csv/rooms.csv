@@ -1,5 +1,3 @@
-rooms.csv
-
 id,name,period,x,y
 1,"Stubbs: Portrait of a Horse","Rococo to Romanticism",503,421
 2,"Power Patronage and Politics: Painting in Florence and Rome 1500–1600","Renaissance",458,395
@@ -47,19 +45,19 @@ id,name,period,x,y
 44,"Post-Impressionism: French Painting 1850–1900","Modernism",670,408
 45,"New Energies: Painting around 1900","Modernism",630,410
 46,"Claude Monet (1840–1926)","Modernism",583,418
-51,"The Wonder of Art: What Painting Can Do","Medieval",139,283
-52,"Creating Illusion: Netherlandish Painting 1420–1480","Medieval",150,323
-53,"Divine Encounters: Netherlandish Painting 1480–1520","Medieval",149,358
-54,"Northern European Painting","Medieval",149,389
-55,"Lines of Expression: German Painting 1400–1520","Medieval",149,421
-56,"Looking at Nature: European Painting 1430–1540","Medieval",143,453
-57,"Wonders of Design: Altarpieces in Florence 1400–1450","Medieval",104,438
-58,"Lyrical Narrative: Painting in Siena 1300–1500","Medieval",105,390
-59,"Architecture and Illusion: Painting in Ferrara Lombardy and the Veneto 1450–1500","Medieval",103,342
-60,"Ambition and Innovation: Painting in Florence 1450–1500","Medieval",104,283
-61,"Shaping the Renaissance Ideal: Raphael in Central Italy 1450–1500","Medieval",61,278
-62,"The Family Palace: Painting in Florence 1400‒1500","Medieval",62,320
-63,"La Serenissima: Painting in Venice 1450–1500","Medieval",59,361
-64,"Gold: European Painting 1260–1550","Medieval",63,396
-65,"Piety and Passion: Italian Painting 1260–1350","Medieval",66,421
-66,"Piero della Francesca (1415/20–1492)","Medieval",68,445
+51,"The Wonder of Art: What Painting Can Do","Medieval",178,312
+52,"Creating Illusion: Netherlandish Painting 1420–1480","Medieval",189,353
+53,"Divine Encounters: Netherlandish Painting 1480–1520","Medieval",189,383
+54,"Northern European Painting","Medieval",189,416
+55,"Lines of Expression: German Painting 1400–1520","Medieval",189,447
+56,"Looking at Nature: European Painting 1430–1540","Medieval",185,476
+57,"Wonders of Design: Altarpieces in Florence 1400–1450","Medieval",145,460
+58,"Lyrical Narrative: Painting in Siena 1300–1500","Medieval",145,414
+59,"Architecture and Illusion: Painting in Ferrara Lombardy and the Veneto 1450–1500","Medieval",155,370
+60,"Ambition and Innovation: Painting in Florence 1450–1500","Medieval",146,311
+61,"Shaping the Renaissance Ideal: Raphael in Central Italy 1450–1500","Medieval",105,310
+62,"The Family Palace: Painting in Florence 1400‒1500","Medieval",105,349
+63,"La Serenissima: Painting in Venice 1450–1500","Medieval",105,389
+64,"Gold: European Painting 1260–1550","Medieval",105,420
+65,"Piety and Passion: Italian Painting 1260–1350","Medieval",110,445
+66,"Piero della Francesca (1415/20–1492)","Medieval",110,467

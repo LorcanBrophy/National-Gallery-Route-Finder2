@@ -11,27 +11,31 @@ import java.util.List;
 public final class BFS {
     public static <T> List<T> traverse(Graph<T> graph, int startID, int endID) {
         // final correct path to be returned
-        MyArrayList<T> correctPath = new MyArrayList<>();
+        List<T> correctPath = new MyArrayList<>();
 
         Vertices<T> start = graph.getVertex(startID);
         Vertices<T> end = graph.getVertex(endID);
+
         if (start == null || end == null) return correctPath;
-        // tracks visited vertices using identityHashCode as the key
+
+        // tracks visited vertices using room/vertex IDs
         MyHashtable<Integer, Vertices<T>> visited = new MyHashtable<>();
-        visited.put(System.identityHashCode(start), start);
-        // add to back (add), remove from front (remove(0))
+        visited.put(startID, start);
+
+        // add to back, remove from front to maintain FIFO order
         MyArrayList<Vertices<T>> queue = new MyArrayList<>();
         queue.add(start);
-        // stores parent of each vertex to reconstruct the path later
-        // key = child's identity, value = parent vertex
-        MyHashtable<Integer, Vertices<T>> parent = new MyHashtable<>();
-        parent.put(System.identityHashCode(start), null);
-        boolean found = false;
-        while (!queue.isEmpty()) {
 
-            // remove from front to maintain FIFO order
-            Vertices<T> current = queue.removeFirst();
-            if (current == end) {
+        // key = child vertex ID, value = parent vertex
+        MyHashtable<Integer, Vertices<T>> parent = new MyHashtable<>();
+        parent.put(startID, null);
+
+        boolean found = false;
+
+        while (!queue.isEmpty()) {
+            Vertices<T> current = queue.remove(0);
+
+            if (current.getId() == endID) {
                 found = true;
                 break;
             }
@@ -39,28 +43,35 @@ public final class BFS {
             // iterate through neighbours of current vertex
             for (Edge<T> edge : current.getEdges()) {
                 Vertices<T> neighbour = edge.getDestination();
-                int neighbourID = System.identityHashCode(neighbour);
+                int neighbourID = neighbour.getId();
+
                 // only visit unvisited neighbours
                 if (!visited.containsKey(neighbourID)) {
                     visited.put(neighbourID, neighbour);
                     queue.add(neighbour);
+
                     // record that current is the parent of this neighbour
                     parent.put(neighbourID, current);
                 }
             }
         }
+
         if (!found) return correctPath;
+
         // reconstruct path by walking back through parent map from end to start
         MyArrayList<Vertices<T>> reversePath = new MyArrayList<>();
         Vertices<T> current = end;
+
         while (current != null) {
             reversePath.add(current);
-            current = parent.get(System.identityHashCode(current));
+            current = parent.get(current.getId());
         }
+
         // reversePath, reverse it into correctPath
         for (int i = reversePath.size() - 1; i >= 0; i--) {
             correctPath.add(reversePath.get(i).getData());
         }
+
         return correctPath;
     }
 }

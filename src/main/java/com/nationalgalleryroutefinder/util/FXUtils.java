@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextInputDialog;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -54,6 +55,25 @@ public final class FXUtils {
         stage.show();
 
         return stage;
+    }
+
+    /**
+     * @param title The title of the input dialog.
+     * @param headerText The header text of the input dialog.
+     * @param contentText The content text of the input dialog.
+     * @param defaultValue The default value of the input dialog.
+     * @return The result of the input dialog.
+     */
+    public static String showInputDialog(String title, String headerText, String contentText, String defaultValue) {
+        TextInputDialog dialog = new TextInputDialog(defaultValue);
+        dialog.setTitle(title);
+        dialog.setHeaderText(headerText);
+        dialog.setContentText(contentText);
+
+        // wait for the user to enter a value and click on the OK button
+        dialog.showAndWait();
+
+        return dialog.getResult();
     }
 
     /**

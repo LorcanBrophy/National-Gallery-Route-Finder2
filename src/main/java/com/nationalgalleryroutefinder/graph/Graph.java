@@ -3,27 +3,30 @@ package com.nationalgalleryroutefinder.graph;
 import com.nationalgalleryroutefinder.model.MyArrayList;
 import com.nationalgalleryroutefinder.model.MyHashtable;
 
-public class Graph<T> {
+import java.util.List;
 
+public class Graph<T> {
     private final MyHashtable<Integer, Vertices<T>> vertex;
-    //a
+
     public Graph() {
         this.vertex = new MyHashtable<>();
     }
 
     public void addVertex(int key, T data) {
-        vertex.put(key, new Vertices<>(data));
+        vertex.put(key, new Vertices<>(key, data));
     }
 
     public Vertices<T> getVertex(int id) {
         return vertex.get(id);
     }
 
-    public MyArrayList<Vertices<T>> getAllVertices() {
-        MyArrayList<Vertices<T>> list = new MyArrayList<>();
+    public List<Vertices<T>> getAllVertices() {
+        List<Vertices<T>> list = new MyArrayList<>();
+
         for (MyHashtable.Entry<Integer, Vertices<T>> entry : vertex) {
             list.add(entry.getValue());
         }
+
         return list;
     }
 

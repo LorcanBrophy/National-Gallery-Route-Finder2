@@ -1,25 +1,36 @@
 package com.nationalgalleryroutefinder.controller;
 
+import com.nationalgalleryroutefinder.algos.BFS;
 import com.nationalgalleryroutefinder.graph.Graph;
 import com.nationalgalleryroutefinder.main.Application;
 import com.nationalgalleryroutefinder.model.Room;
 import com.nationalgalleryroutefinder.util.CSVLoader;
 import com.nationalgalleryroutefinder.util.FXUtils;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Point2D;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.LineTo;
+import javafx.scene.shape.MoveTo;
+import javafx.scene.shape.Path;
+import javafx.util.Duration;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -31,12 +42,14 @@ public class Controller implements Initializable {
     private MenuBar menuBar;
     @FXML
     private ImageView imageView;
+    @FXML
+    private Pane imageOverlayPane;
 
     private WritableImage displayedImage;
     private Image blackAndWhiteImage;
 
-    private Point2D startPoint;
-    private Point2D endPoint;
+    private int startRoomID;
+    private int endRoomID;
 
     private Graph<Room> graph;
 
@@ -45,13 +58,7 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         imageView.setOnMouseClicked(this::onImageViewMouseClicked);
 
-        // fire event when the mouse is clicked anywhere in the border pane
-        borderPane.setOnMouseClicked(this::onBorderPaneMouseClicked);
-
-        // fire event when the center pane is clicked (the one that contains the image)
-        borderPane.getCenter().setOnMouseClicked(this::onBorderPaneCenterMouseClicked);
-
-        configureImageViewSize();
+        configureImageViewSize(1200, 600);
 
         loadFloorPlanImage();
         loadBlackAndWhiteImage();
@@ -69,6 +76,22 @@ public class Controller implements Initializable {
     }
 
     @FXML
+    private void showBFSPath() {
+        startRoomID = Integer.parseInt(FXUtils.showInputDialog("BFS Path", "Enter the ID of the starting room", "Room ID:", "1"));
+        endRoomID = Integer.parseInt(FXUtils.showInputDialog("BFS Path", "Enter the ID of the ending room", "Room ID:", "66"));
+
+        List<Room> path = BFS.traverse(graph, startRoomID, endRoomID);
+
+        if (path.isEmpty()) {
+            setStatusBar("No BFS path found from room " + startRoomID + " to room " + endRoomID, true);
+            return;
+        }
+
+        float animationDuration = Float.parseFloat(FXUtils.showInputDialog("BFS Path", "Enter the duration of the animation (in seconds)", "Duration:", "5"));
+        drawPath(path, Duration.seconds(animationDuration));
+    }
+
+    @FXML
     private void quitApplication() {
         System.exit(0);
     }
@@ -77,15 +100,10 @@ public class Controller implements Initializable {
     // Event Handlers
     // -------------------------------------------------------------------------
     protected void onImageViewMouseClicked(MouseEvent event) {
-
-    }
-
-    protected void onBorderPaneCenterMouseClicked(MouseEvent event) {
-
-    }
-
-    protected void onBorderPaneMouseClicked(MouseEvent event) {
-
+        // left mouse button click
+        if (event.getButton() == MouseButton.PRIMARY) {
+            setStatusBar("Clicked Point: " + "x = " + event.getX() + ", " + "y = " + event.getY(), true);
+        }
     }
 
     // -------------------------------------------------------------------------
@@ -100,6 +118,76 @@ public class Controller implements Initializable {
 
         statusLabel.setText(message);
         statusLabel.setVisible(visible);
+    }
+
+    private void drawPath(List<Room> path, Duration duration) {
+        // clear the path from the image view
+        clearPath();
+
+        System.out.println("Path Size: " + path.size());
+
+        // set the duration of each step in the path
+        Duration stepDuration = duration.divide(path.size());
+        Timeline timeline = new Timeline();
+
+        // the animated line path that will be drawn on the image view
+        Path animatedLinePath = new Path();
+        animatedLinePath.setStroke(Color.BLUE);
+        animatedLinePath.setStrokeWidth(2);
+        animatedLinePath.setManaged(false);
+
+        // scale the coordinates of the path to the size of the image view
+        double scaleX = imageView.getFitWidth() / imageView.getImage().getWidth();
+        double scaleY = imageView.getFitHeight() / imageView.getImage().getHeight();
+
+        // get the coordinates of the first and last rooms in the path
+        double startX = path.getFirst().getX() * scaleX;
+        double startY = path.getFirst().getY() * scaleY;
+        double endX = path.getLast().getX() * scaleX;
+        double endY = path.getLast().getY() * scaleY;
+
+        System.out.println("Path Start: " + startX + ", " + startY);
+        System.out.println("Path End: " + endX + ", " + endY);
+
+        Circle startRoomCircle = new Circle(startX, startY, 5);
+        startRoomCircle.setFill(Color.GREEN);
+        startRoomCircle.setManaged(false);
+
+        Circle endRoomCircle = new Circle(endX, endY, 5);
+        endRoomCircle.setFill(Color.RED);
+        endRoomCircle.setManaged(false);
+
+        imageOverlayPane.getChildren().addAll(animatedLinePath, startRoomCircle, endRoomCircle);
+
+        // move to the first room in the path
+        MoveTo startRoom = new MoveTo(startX, startY);
+        animatedLinePath.getElements().add(startRoom);
+
+        // skip the first room because it is already drawn
+        for (int i = 1; i < path.size(); i++) {
+            // get the coordinates of the next room in the path
+            double x = path.get(i).getX() * scaleX;
+            double y = path.get(i).getY() * scaleY;
+
+            // create a key frame for each step in the path
+            KeyFrame keyFrame = new KeyFrame (
+                    // add a delay between each step
+                    stepDuration.multiply(i + 1),
+                    _ -> {
+                        // draw a line to the next room
+                        LineTo lineToNextRoom = new LineTo(x, y);
+
+                        animatedLinePath.getElements().add(lineToNextRoom);
+                    });
+
+            timeline.getKeyFrames().add(keyFrame);
+        }
+
+        timeline.play();
+    }
+
+    private void clearPath() {
+        imageOverlayPane.getChildren().removeIf(node -> node instanceof Circle || node instanceof Path);
     }
 
     private void createGraph() {
@@ -146,13 +234,13 @@ public class Controller implements Initializable {
         return image;
     }
 
-    private void configureImageViewSize() {
-        if (borderPane.getCenter() instanceof Pane imageContainer) {
-            imageView.setPreserveRatio(true);
-            imageView.setSmooth(true);
+    private void configureImageViewSize(double width, double height) {
+        imageView.setFitWidth(width);
+        imageView.setFitHeight(height);
 
-            imageView.fitWidthProperty().bind(imageContainer.widthProperty());
-            imageView.fitHeightProperty().bind(imageContainer.heightProperty());
-        }
+        imageOverlayPane.setPrefWidth(width);
+        imageOverlayPane.setPrefHeight(height);
+        imageOverlayPane.setMaxWidth(width);
+        imageOverlayPane.setMaxHeight(height);
     }
 }
