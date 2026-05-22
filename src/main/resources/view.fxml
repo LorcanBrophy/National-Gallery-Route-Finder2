@@ -39,6 +39,7 @@
                    <MenuItem mnemonicParsing="false" onAction="#showBFSPath" text="BFS Path"/>
                    <MenuItem mnemonicParsing="false" onAction="#choosePoints" text="Choose Pixels"/>
                    <MenuItem mnemonicParsing="false" onAction="#showBFSWithPixels" text="BFS Path using Pixels"/>
+                   <MenuItem mnemonicParsing="false" onAction="#showDijkstraPath" text="Dijkstra Path"/>
                </Menu>
            </MenuBar>
            <Pane prefWidth="1043.0">

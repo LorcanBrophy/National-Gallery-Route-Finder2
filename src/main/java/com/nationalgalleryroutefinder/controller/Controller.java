@@ -2,6 +2,7 @@ package com.nationalgalleryroutefinder.controller;
 
 import com.nationalgalleryroutefinder.algos.BFS;
 import com.nationalgalleryroutefinder.algos.BFS2;
+import com.nationalgalleryroutefinder.algos.Dijkstra;
 import com.nationalgalleryroutefinder.graph.Graph;
 import com.nationalgalleryroutefinder.main.Application;
 import com.nationalgalleryroutefinder.model.Room;
@@ -35,6 +36,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -100,6 +102,30 @@ public class Controller implements Initializable {
         }
 
         float animationDuration = Float.parseFloat(FXUtils.showInputDialog("BFS Path", "Enter the duration of the animation (in seconds)", "Duration:", "5"));
+        drawPath(path, Duration.seconds(animationDuration));
+    }
+
+    @FXML
+    private void showDijkstraPath() {
+        startRoomID = Integer.parseInt(FXUtils.showInputDialog("Dijkstra Path", "Enter the ID of the starting room", "Room ID:", "1"));
+        endRoomID = Integer.parseInt(FXUtils.showInputDialog("Dijkstra Path", "Enter the ID of the ending room", "Room ID:", "66"));
+
+        List<Room> avoidedRooms = new ArrayList<>();
+
+        int numAvoid = Integer.parseInt(FXUtils.showInputDialog("Dijkstra Path", "Enter the number of rooms to avoid", "Number", "1"));
+
+        for (int i = 0; i < numAvoid; i++) {
+            int avoidID = Integer.parseInt(FXUtils.showInputDialog("Dijkstra Path", "Enter the ID of the room you want to Avoid", "Room ID:", "0"));
+            avoidedRooms.add(graph.getVertex(avoidID).getData());
+        }
+        List<Room> path = Dijkstra.traverse(graph, startRoomID, endRoomID, avoidedRooms);
+
+        if (path.isEmpty()) {
+            setStatusBar("No Dijkstra path found from room " + startRoomID + " to room " + endRoomID, true);
+            return;
+        }
+
+        float animationDuration = Float.parseFloat(FXUtils.showInputDialog("Dijkstra Path", "Enter the duration of the animation (in seconds)", "Duration:", "5"));
         drawPath(path, Duration.seconds(animationDuration));
     }
 
