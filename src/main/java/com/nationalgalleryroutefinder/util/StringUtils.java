@@ -1,10 +1,6 @@
-package ie.setu.nationalgalleryroutefinder.util;
+package com.nationalgalleryroutefinder.util;
 
 public final class StringUtils {
-    private StringUtils() {
-        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
-    }
-
     /**
      * Capitalizes the first letter of {@code str} and lowercases the rest.
      *

@@ -1,7 +1,7 @@
-package ie.setu.nationalgalleryroutefinder.Graphs;
+package com.nationalgalleryroutefinder.graph;
 
-import ie.setu.nationalgalleryroutefinder.model.MyArrayList;
-import ie.setu.nationalgalleryroutefinder.model.MyHashtable;
+import com.nationalgalleryroutefinder.model.MyArrayList;
+import com.nationalgalleryroutefinder.model.MyHashtable;
 
 public class Graph<T> {
 

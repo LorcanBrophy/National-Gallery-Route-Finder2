@@ -54,7 +54,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                ie.setu.nationalgalleryroutefinder.main.Application
+                                com.nationalgalleryroutefinder.main.Application
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

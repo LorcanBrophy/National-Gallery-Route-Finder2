@@ -1,13 +1,9 @@
-package ie.setu.nationalgalleryroutefinder.util;
+package com.nationalgalleryroutefinder.util;
 
 import java.util.Comparator;
 import java.util.List;
 
 public final class ArrayUtils {
-    private ArrayUtils() {
-        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
-    }
-
     /**
      * Sorts an int array using the Insertion Sort algorithm.
      */
