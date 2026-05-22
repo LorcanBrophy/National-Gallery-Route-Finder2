@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa49fb8f-8669-4a52-94fd-812d820c4a77" name="Changes" comment="Refactor `BFS` and `Dijkstra` algorithms to improve type safety and readability  &#10;&#10;- Updated `BFS` to use `List` instead of `MyArrayList` for result type and `Queue` operations.  &#10;- Updated `Dijkstra` to accept `List` for avoided rooms, improving flexibility.  &#10;- Made both classes `final` to prevent inheritance.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/algos/BFS2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nationalgalleryroutefinder/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/gallery_floor_plan.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/gallery_floor_plan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/gallery_floor_plan_bw.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/gallery_floor_plan_bw.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +160,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.40114942",
@@ -277,7 +278,7 @@
       <workItem from="1779398560624" duration="4970000" />
       <workItem from="1779403621745" duration="6400000" />
       <workItem from="1779416211784" duration="9000" />
-      <workItem from="1779416250421" duration="117000" />
+      <workItem from="1779416250421" duration="2991000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />

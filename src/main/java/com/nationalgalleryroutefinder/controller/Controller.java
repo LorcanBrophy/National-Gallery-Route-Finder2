@@ -1,6 +1,7 @@
 package com.nationalgalleryroutefinder.controller;
 
 import com.nationalgalleryroutefinder.algos.BFS;
+import com.nationalgalleryroutefinder.algos.BFS2;
 import com.nationalgalleryroutefinder.graph.Graph;
 import com.nationalgalleryroutefinder.main.Application;
 import com.nationalgalleryroutefinder.model.Room;
@@ -8,6 +9,7 @@ import com.nationalgalleryroutefinder.util.CSVLoader;
 import com.nationalgalleryroutefinder.util.FXUtils;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -27,6 +29,9 @@ import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.util.Duration;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -53,11 +58,18 @@ public class Controller implements Initializable {
 
     private Graph<Room> graph;
 
+
+
+
+    private BFS2.PointOnGraph startPoint = null;
+    private BFS2.PointOnGraph endPoint = null;
+    private EventHandler<MouseEvent> pointSelectionHandler;
+
     // FXML fields must be initialized here, not the constructor, otherwise they will load too early.
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         imageView.setOnMouseClicked(this::onImageViewMouseClicked);
-
+        pixelBFSGetCoords();
         configureImageViewSize(1200, 600);
 
         loadFloorPlanImage();
@@ -91,6 +103,63 @@ public class Controller implements Initializable {
         drawPath(path, Duration.seconds(animationDuration));
     }
 
+    // used to get coords for BFS with pixels
+
+    private void pixelBFSGetCoords() {
+        pointSelectionHandler = mouseEvent -> {
+
+            double displayedWidth = imageView.getBoundsInLocal().getWidth();
+            double displayedHeight = imageView.getBoundsInLocal().getHeight();
+
+            double scaleX = imageView.getImage().getWidth() / displayedWidth;
+            double scaleY = imageView.getImage().getHeight() / displayedHeight;
+
+            int x = (int) (mouseEvent.getX() * scaleX);
+            int y = (int) (mouseEvent.getY() * scaleY);
+
+            x = (int) Math.max(0, Math.min(x, imageView.getImage().getWidth() - 1));
+            y = (int) Math.max(0, Math.min(y, imageView.getImage().getHeight() - 1));
+
+            if (startPoint == null) {
+                startPoint = new BFS2.PointOnGraph(x, y);
+            } else if (endPoint == null) {
+                endPoint = new BFS2.PointOnGraph(x, y);
+                imageView.removeEventHandler(MouseEvent.MOUSE_CLICKED, pointSelectionHandler);
+            }
+        };
+    }
+
+    public void choosePoints() {
+        startPoint = null;
+        endPoint = null;
+
+        imageView.removeEventHandler(MouseEvent.MOUSE_CLICKED, pointSelectionHandler);
+        imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, pointSelectionHandler);
+    }
+
+    @FXML
+    private void showBFSWithPixels() throws IOException {
+
+        BufferedImage bwImage = ImageIO.read(
+                new File("src/main/resources/images/gallery_floor_plan_bw.png")
+        );
+
+        if (startPoint == null || endPoint == null) {
+            System.out.println("ya done goofed");
+            return;
+        }
+
+        BFS2.PointOnGraph start = new BFS2.PointOnGraph(startPoint.x(), startPoint.y());
+        BFS2.PointOnGraph end = new BFS2.PointOnGraph(endPoint.x(), endPoint.y());
+
+        List<BFS2.PointOnGraph> path = BFS2.traverse(bwImage, start, end);
+
+        clearPath();
+        float animationDuration = Float.parseFloat(FXUtils.showInputDialog("BFS Path", "Enter the duration of the animation (in seconds)", "Duration:", "5"));
+
+        drawPathBFSPixel(path, Duration.seconds(animationDuration));
+    }
+
     @FXML
     private void quitApplication() {
         System.exit(0);
@@ -99,6 +168,7 @@ public class Controller implements Initializable {
     // -------------------------------------------------------------------------
     // Event Handlers
     // -------------------------------------------------------------------------
+
     protected void onImageViewMouseClicked(MouseEvent event) {
         // left mouse button click
         if (event.getButton() == MouseButton.PRIMARY) {
@@ -191,6 +261,75 @@ public class Controller implements Initializable {
 
                         animatedLinePath.getElements().add(lineToNextRoom);
                     });
+
+            timeline.getKeyFrames().add(keyFrame);
+        }
+
+        timeline.play();
+    }
+
+    private void drawPathBFSPixel(List<BFS2.PointOnGraph> path, Duration duration) {
+        // clear the path from the image view
+        clearPath();
+
+        System.out.println("Path Size: " + path.size());
+
+        if (path.isEmpty()) return;
+
+        // set the duration of each step in the path
+        Duration stepDuration = duration.divide(path.size());
+        Timeline timeline = new Timeline();
+
+        // animated path
+        Path animatedLinePath = new Path();
+        animatedLinePath.setStroke(Color.BLUE);
+        animatedLinePath.setStrokeWidth(2);
+        animatedLinePath.setManaged(false);
+
+        double scale = Math.min(
+                imageView.getFitWidth() / imageView.getImage().getWidth(),
+                imageView.getFitHeight() / imageView.getImage().getHeight()
+        );
+
+        double displayedWidth = imageView.getImage().getWidth() * scale;
+        double displayedHeight = imageView.getImage().getHeight() * scale;
+
+        double offsetX = (imageView.getFitWidth() - displayedWidth) / 2;
+        double offsetY = (imageView.getFitHeight() - displayedHeight) / 2;
+
+        // start and end
+        BFS2.PointOnGraph start = path.get(0);
+        BFS2.PointOnGraph end = path.get(path.size() - 1);
+
+        double startX = start.x() * scale + offsetX;
+        double startY = start.y() * scale + offsetY;
+
+        double endX = end.x() * scale + offsetX;
+        double endY = end.y() * scale + offsetY;
+
+        Circle startCircle = new Circle(startX, startY, 5);
+        startCircle.setFill(Color.GREEN);
+        startCircle.setManaged(false);
+
+        Circle endCircle = new Circle(endX, endY, 5);
+        endCircle.setFill(Color.RED);
+        endCircle.setManaged(false);
+
+        imageOverlayPane.getChildren().addAll(animatedLinePath, startCircle, endCircle);
+
+        // move to start
+        animatedLinePath.getElements().add(new MoveTo(startX, startY));
+
+        for (int i = 1; i < path.size(); i++) {
+            BFS2.PointOnGraph p = path.get(i);
+
+            double x = p.x() * scale + offsetX;
+            double y = p.y() * scale + offsetY;
+
+            KeyFrame keyFrame = new KeyFrame(
+                    stepDuration.multiply(i + 1),
+                    _ -> animatedLinePath.getElements().add(new LineTo(x, y))
+            );
 
             timeline.getKeyFrames().add(keyFrame);
         }
