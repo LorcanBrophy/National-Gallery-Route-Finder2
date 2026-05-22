@@ -1,6 +1,7 @@
 package com.nationalgalleryroutefinder.benchmark;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import com.nationalgalleryroutefinder.graph.Graph;
 import com.nationalgalleryroutefinder.graph.Vertices;
@@ -11,9 +12,9 @@ import com.nationalgalleryroutefinder.algos.BFS;
 import com.nationalgalleryroutefinder.algos.Dijkstra;
 import org.openjdk.jmh.annotations.*;
 
-@Measurement(iterations = 1, time = 1)
-@Warmup(iterations = 2, time = 1)
-@Fork(value = 1)
+@Measurement(iterations = 3, time = 3)
+@Warmup(iterations = 3, time = 3)
+@Fork(value = 3)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Thread)
@@ -25,22 +26,23 @@ public class benchmarking {
 
     // empty avoided rooms and waypoints for benchmarking purposes
     private final MyArrayList<Room> avoid = new MyArrayList<>();
-    private final MyArrayList<Integer> waypoints = new MyArrayList<>();
 
     @Setup(Level.Invocation)
     public void setup() throws IOException {
         CSVLoader loader = new CSVLoader();
 
         graph = loader.loadGraph(
-                "src/main/resources/ie/setu/nationalgalleryroutefinder/rooms.csv",
-                "src/main/resources/ie/setu/nationalgalleryroutefinder/exhibits.csv",
-                "src/main/resources/ie/setu/nationalgalleryroutefinder/edges.csv"
+                "src/main/resources/csv/rooms.csv",
+                "src/main/resources/csv/exhibits.csv",
+                "src/main/resources/csv/edges.csv"
         );
 
         // pick two different random vertices for start and end each invocation
-        MyArrayList<Vertices<Room>> vertices = graph.getAllVertices();
+        List<Vertices<Room>> vertices = graph.getAllVertices();
+
         int startIndex = (int) (Math.random() * vertices.size());
         int endIndex;
+
         do endIndex = (int) (Math.random() * vertices.size());
         while (endIndex == startIndex);
 
@@ -54,15 +56,4 @@ public class benchmarking {
         BFS.traverse(graph, startID, endID);
     }
 
-    // benchmarks Dijkstra shortest path between two random rooms
-    @Benchmark
-    public void runDijkstra() {
-        Dijkstra.traverse(graph, startID, endID, avoid);
-    }
-
-    // benchmarks Dijkstra with waypoints (empty waypoints list = same as shortest path)
-    @Benchmark
-    public void runDijkstraWaypoints() {
-        RoutePlanner.traverseWaypoints(graph, startID, endID, avoid, waypoints);
-    }
 }

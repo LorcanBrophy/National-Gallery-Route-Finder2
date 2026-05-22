@@ -27,38 +27,22 @@ public class CSVLoader {
     private void loadRooms(Graph<Room> graph, String filePath) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
 
-            // skip the first line
-            String currentLine = br.readLine();
 
-            while ((currentLine = br.readLine()) != null) {
+            String line = br.readLine();
 
-                // ignore empty lines
-                if (currentLine.isEmpty()) continue;
+            while ((line = br.readLine()) != null) {
 
-                // split each line into individual fields
-                int lineLimit = 5;
-                String[] fields = currentLine.split(",", lineLimit);
+                String[] fields = line.split(",", 5);
 
-                if (fields.length > lineLimit) {
-                    System.err.println("Skipping room line: " + currentLine);
-                    continue;
-                }
+                // assign each field for Room constructor
+                int id = Integer.parseInt(fields[0].trim());
+                String name = fields[1].replace("\"", "").trim();
+                String period = fields[2].replace("\"", "").trim();
+                int x = Integer.parseInt(fields[3].trim());
+                int y = Integer.parseInt(fields[4].trim());
 
-                try {
-                    int id = Integer.parseInt(fields[0].trim());
-
-                    String name = fields[1].replace("\"", "").trim();
-                    String period = fields[2].replace("\"", "").trim();
-
-                    int x = Integer.parseInt(fields[3].trim());
-                    int y = Integer.parseInt(fields[4].trim());
-
-                    graph.addVertex(id, new Room(id, name, period, x, y));
-                }
-                catch (NumberFormatException e) {
-                    System.err.println("Skipping room line: " + currentLine);
-                    System.err.println(e.getMessage());
-                }
+                Room room = new Room(id, name, period, x, y);
+                graph.addVertex(id, room);
             }
         }
     }
@@ -66,35 +50,20 @@ public class CSVLoader {
     private void loadExhibits(Graph<Room> graph, String filePath) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
 
-            String currentLine = br.readLine();
+            String line = br.readLine();
 
-            while ((currentLine = br.readLine()) != null) {
-                if (currentLine.isEmpty()) continue;
+            while ((line = br.readLine()) != null) {
 
-                int lineLimit = 3;
-                String[] fields = currentLine.split(",", lineLimit);
+                String[] fields = line.split(",", 3);
 
-                if (fields.length > lineLimit) {
-                    System.err.println("Skipping exhibit line: " + currentLine);
-                    continue;
-                }
-                try {
-                    int roomId = Integer.parseInt(fields[0].trim());
-                    String title = fields[1].replace("\"", "").trim();
-                    String artist = fields[2].replace("\"", "").trim();
+                int roomID = Integer.parseInt(fields[0].trim());
+                String title = fields[1].replace("\"", "").trim();
+                String artist = fields[2].replace("\"", "").trim();
 
-                    var vertex = graph.getVertex(roomId);
-                    if (vertex == null) {
-                        System.err.println("room ID not found: " + roomId);
-                        continue;
-                    }
+                // create room which the exhibit belongs to
+                Room room = graph.getVertex(roomID).getData();
 
-                    vertex.getData().addExhibit(new Exhibit(title, artist));
-                }
-                catch (NumberFormatException e) {
-                    System.err.println("Skipping exhibit line: " + currentLine);
-                    System.err.println(e.getMessage());
-                }
+                room.addExhibit(new Exhibit(title, artist));
             }
         }
     }
@@ -102,30 +71,17 @@ public class CSVLoader {
     private void loadEdges(Graph<Room> graph, String filePath) throws IOException {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
 
-            String currentLine = br.readLine();
+            String line = br.readLine();
 
-            while ((currentLine = br.readLine()) != null) {
-                if (currentLine.isEmpty()) continue;
+            while ((line = br.readLine()) != null) {
 
-                int lineLimit = 3;
-                String[] fields = currentLine.split(",", lineLimit);
+                String[] fields = line.split(",", 3);
 
-                if (fields.length > lineLimit) {
-                    System.err.println("Skipping edge line: " + currentLine);
-                    continue;
-                }
+                int src = Integer.parseInt(fields[0].trim());
+                int dest = Integer.parseInt(fields[1].trim());
+                double weight = Double.parseDouble(fields[2].trim());
 
-                try {
-                    int src = Integer.parseInt(fields[0].trim());
-                    int dest = Integer.parseInt(fields[1].trim());
-                    double weight = Double.parseDouble(fields[2].trim());
-
-                    graph.addUndirectedEdge(src, dest, weight);
-                }
-                catch (NumberFormatException e) {
-                    System.err.println("Skipping edge line: " + currentLine);
-                    System.err.println(e.getMessage());
-                }
+                graph.addUndirectedEdge(src, dest, weight); // s
             }
         }
     }
