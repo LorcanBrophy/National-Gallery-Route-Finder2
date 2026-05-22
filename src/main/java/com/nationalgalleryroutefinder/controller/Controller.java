@@ -136,18 +136,28 @@ public class Controller implements Initializable {
         animatedLinePath.setStrokeWidth(2);
         animatedLinePath.setManaged(false);
 
+        double scale = Math.min(imageView.getFitWidth() / imageView.getImage().getWidth(), imageView.getFitHeight() / imageView.getImage().getHeight());
+
         // scale the coordinates of the path to the size of the image view
-        double scaleX = imageView.getFitWidth() / imageView.getImage().getWidth();
-        double scaleY = imageView.getFitHeight() / imageView.getImage().getHeight();
+        double displayedWidth = imageView.getImage().getWidth() * scale;
+        double displayedHeight = imageView.getImage().getHeight() * scale;
+
+        double offsetX = (imageView.getFitWidth() - displayedWidth) / 2;
+        double offsetY = (imageView.getFitHeight() - displayedHeight) / 2;
 
         // get the coordinates of the first and last rooms in the path
-        double startX = path.getFirst().getX() * scaleX;
-        double startY = path.getFirst().getY() * scaleY;
-        double endX = path.getLast().getX() * scaleX;
-        double endY = path.getLast().getY() * scaleY;
 
-        System.out.println("Path Start: " + startX + ", " + startY);
-        System.out.println("Path End: " + endX + ", " + endY);
+        Room start = path.get(0);
+        Room end = path.get(path.size() - 1);
+
+        double startX = start.getX() * scale + offsetX;
+        double startY = start.getY() * scale + offsetY;
+
+        double endX = end.getX() * scale + offsetX;
+        double endY = end.getY() * scale + offsetY;
+
+        System.out.println("Path Start: " + start.getX() + ", " + start.getY());
+        System.out.println("Path End: " + end.getX() + ", " + end.getY());
 
         Circle startRoomCircle = new Circle(startX, startY, 5);
         startRoomCircle.setFill(Color.GREEN);
@@ -160,14 +170,16 @@ public class Controller implements Initializable {
         imageOverlayPane.getChildren().addAll(animatedLinePath, startRoomCircle, endRoomCircle);
 
         // move to the first room in the path
-        MoveTo startRoom = new MoveTo(startX, startY);
-        animatedLinePath.getElements().add(startRoom);
+        MoveTo startRoom = new MoveTo(start.getX(), start.getY());
+        animatedLinePath.getElements().add(new MoveTo(startX, startY));
 
         // skip the first room because it is already drawn
         for (int i = 1; i < path.size(); i++) {
             // get the coordinates of the next room in the path
-            double x = path.get(i).getX() * scaleX;
-            double y = path.get(i).getY() * scaleY;
+            Room room = path.get(i);
+
+            double x = room.getX() * scale + offsetX;
+            double y = room.getY() * scale + offsetY;
 
             // create a key frame for each step in the path
             KeyFrame keyFrame = new KeyFrame (
