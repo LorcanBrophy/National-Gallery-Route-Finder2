@@ -48,7 +48,7 @@ public class benchmarking {
         endID   = vertices.get(endIndex).getData().getId();
     }
 
-    // benchmarks BFS traversal between two random rooms
+    // benchmarks BFS traversal between two random roomss
     @Benchmark
     public void runBFS() {
         BFS.traverse(graph, startID, endID);
