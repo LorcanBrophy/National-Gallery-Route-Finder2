@@ -12,12 +12,12 @@ import java.util.Comparator;
 
 public final class Dijkstra {
 
-    public static <T> MyArrayList<T> traverse(Graph<T> graph, int startID, int endID, List<T> avoidedRooms) {
-        MyArrayList<T> result = new MyArrayList<>();
+    public static <T> List<T> traverse(Graph<T> graph, int startID, int endID, List<T> avoidedRooms) {
+        List<T> result = new MyArrayList<>();
         Vertices<T> start = graph.getVertex(startID);
         Vertices<T> end = graph.getVertex(endID);
         if (start == null || end == null) return result;
-        MyArrayList<Vertices<T>> vertices = graph.getAllVertices();
+        List<Vertices<T>> vertices = graph.getAllVertices();
         int size = vertices.size();
 
         MyHashtable<Integer, Integer> map = new MyHashtable<>();
@@ -62,7 +62,7 @@ public final class Dijkstra {
         }
 
         // reconstruct path by walking back through parent array from end to start
-        MyArrayList<T> reversePath = new MyArrayList<>();
+        List<T> reversePath = new MyArrayList<>();
         int curr = map.get(System.identityHashCode(end));
         while (curr != -1) {
             reversePath.add(vertices.get(curr).getData());

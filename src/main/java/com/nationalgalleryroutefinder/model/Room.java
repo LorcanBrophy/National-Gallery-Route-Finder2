@@ -20,18 +20,23 @@ public class Room {
     public int getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
+
     public String getPeriod() {
         return period;
     }
+
     public int getX() {
         return x;
     }
+
     public int getY() {
         return y;
     }
+
     public MyHashtable<String, Exhibit> getExhibits() {
         return exhibits;
     }

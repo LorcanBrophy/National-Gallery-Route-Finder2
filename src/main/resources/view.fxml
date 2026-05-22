@@ -8,22 +8,24 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.layout.StackPane?>
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="border-pane" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nationalgalleryroutefinder.controller.Controller">
    <center>
-      <HBox alignment="CENTER" prefWidth="1200.0" BorderPane.alignment="CENTER">
+      <StackPane fx:id="imageCenterPane" alignment="CENTER">
          <children>
-            <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageView" fitHeight="600.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/gallery_floor_plan.png" />
                </image>
             </ImageView>
+
+            <Pane fx:id="imageOverlayPane" maxHeight="600.0" maxWidth="1200.0" prefHeight="600.0" prefWidth="1200.0" mouseTransparent="true" />
          </children>
-      </HBox>
+      </StackPane>
    </center>
    <top>
       <VBox alignment="CENTER" BorderPane.alignment="CENTER">
@@ -39,6 +41,7 @@
                   <Menu mnemonicParsing="false" text="View">
                      <items>
                         <MenuItem mnemonicParsing="false" onAction="#showBlackAndWhiteImage" text="Black and White" />
+                        <MenuItem mnemonicParsing="false" onAction="#showBFSPath" text="BFS Path" />
                      </items></Menu>
               </menus>
             </MenuBar>
